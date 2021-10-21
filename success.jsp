@@ -8,19 +8,28 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% String name=(String)request.getAttribute("name");
-String password=(String)request.getAttribute("userpass");
 
-String email=(String)request.getAttribute("useremail");
-%>
-<!-- <h1>your name is: <%=name %></h1>
-<h1>your password is: <%=password %>,keep it secure</h1>
-<h1>your email is: <%=email %></h1> -->
-<h1 style="color: red;">welcome, ${projectName}</h1>
 
-<h1>user name: ${user.username }</h1>
-<h1>password:${user.userpass}</h1>
-<h1>email:${user.useremail }</h1>
+<h1 style="color: red;">${projectName}</h1>
+<form action="updateform" method="post">
 
+<h1>user name:</h1>
+
+<input type="text" name="username">
+<h1>user email:</h1>
+
+<input type="text" name="useremail">
+
+<h1>user password:</h1>
+
+<input type="text" name="userpass">
+
+<button type="submit" name="update">Update</button></form>
+<form action="deleteform" method="post">
+<h1>user name:</h1>
+
+<input type="text" name="username">
+<button type="submit" name="delete">Delete</button>
+</form>
 </body>
 </html>

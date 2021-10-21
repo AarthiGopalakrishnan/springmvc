@@ -6,17 +6,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="user_details")
+@Table(name="user_credentials")
+
 public class user {
 	@Id
-	private int id;
-	@Column(length=50)
+	
+	@Column(length=50,name="uname")
 private String username;
-	@Column(length=50)
+	
+	@Column(length=50, name="password")
 private String userpass;
-	@Column(length=100)
-
+	
+	@Column(length=100,name="email")
 private String useremail;
+	
 public String getUsername() {
 	return username;
 }
